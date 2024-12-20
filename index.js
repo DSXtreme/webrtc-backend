@@ -5,7 +5,7 @@ import {Server} from "socket.io"
 import { roomHandeler } from "./sockets/roomHandeler/index.js"
 
 const app = express()
-app.use(cors)
+app.use(cors())
 
 const server = http.createServer(app)
 const io = new Server(server, {
@@ -33,6 +33,13 @@ io.on("connection", (socket) => {
     // error 
     socket.on("error", (err)=>{
         console.error("socket error: ", err)
+    })
+})
+
+app.get("/",(req,res) => {
+    console.log("ping")
+    return res.send({
+        message: "Running"
     })
 })
 
