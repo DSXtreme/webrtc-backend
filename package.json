@@ -4,14 +4,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js "
+    "dev": "nodemon index.js"
   },
   "type": "module",
   "author": "",
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.1",
+    "redis": "^4.7.0",
     "socket.io": "^4.8.1",
     "uuid": "^11.0.3"
   }
