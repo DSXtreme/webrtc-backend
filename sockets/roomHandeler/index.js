@@ -2,12 +2,6 @@ import { v4 as uuidv4 } from "uuid";
 import { createClient } from "redis";
 import { handleJoinRoom, handleCreateRoom } from "./roomEvents.js";
 
-/**
- * {
- *  "roomdId": ["peerIds"]
- * }
- */
-let room = {};
 
 // Room Handeler
 export const roomHandeler = ({ socket, redisClient }) => {

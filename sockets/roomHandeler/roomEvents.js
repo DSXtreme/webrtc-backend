@@ -25,7 +25,7 @@ export const handleJoinRoom = (socket, { roomId, peerId }) => {
             console.log("room: ", roomId);
 
             // Letting all user know about the disconnected user
-            socket.to(roomId).emit("user-disconnected", peerId);
+            socket.to(roomId).emit("user-disconnected", {peerId});
         });
 
         socket.emit("get-user", {
